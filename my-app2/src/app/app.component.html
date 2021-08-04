@@ -1,2 +1,8 @@
 <h2>{{title}}</h2>
+<button (click)="getEvent('This is click Event')">Call Function</button>
+<br/> <br/>
+<!-- <input type='text' #box (keyup)="getEvent(box.value)"/> -->
+<br/> <br/>
+<input type='text' #box (keyup)="getEvent(box.value)" (blur)="getEvent('blur event')"/>
 <app-login></app-login>
+<app-signup></app-signup>
