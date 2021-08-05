@@ -1,8 +1,16 @@
-<h2>{{title}}</h2>
-<button (click)="getEvent('This is click Event')">Call Function</button>
-<br/> <br/>
-<!-- <input type='text' #box (keyup)="getEvent(box.value)"/> -->
-<br/> <br/>
-<input type='text' #box (keyup)="getEvent(box.value)" (blur)="getEvent('blur event')"/>
+<section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button color="primary">Primary</button>
+      <button mat-button color="accent">Accent</button>
+      <button mat-button color="warn">Warn</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+
+
+
 <app-login></app-login>
 <app-signup></app-signup>
