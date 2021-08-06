@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 // material angular
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -19,7 +21,9 @@ import { MatButtonModule } from '@angular/material/button';
     UsersModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],

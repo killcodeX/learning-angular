@@ -1,16 +1,15 @@
-<section>
-    <div class="example-label">Basic</div>
-    <div class="example-button-row">
-      <button mat-button>Basic</button>
-      <button mat-button color="primary">Primary</button>
-      <button mat-button color="accent">Accent</button>
-      <button mat-button color="warn">Warn</button>
-      <button mat-button disabled>Disabled</button>
-      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-    </div>
-  </section>
+<h1 style="align-items: center;">Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/login" routerLinkActive="active">Login Component</a></li>
+    <li><a routerLink="/signup" routerLinkActive="active">SignUp Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
 
 
 
-<app-login></app-login>
-<app-signup></app-signup>
+<!-- <app-login></app-login>
+<app-signup></app-signup> -->

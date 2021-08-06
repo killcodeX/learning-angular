@@ -7,33 +7,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app2';
-  name : String = '';
-  password: any = '';
-  phone: any = '';
-  terms: boolean = false;
+  birthday=Date.now();
+  users = [
+    {
+      user:'Saitama',
+      age:26,
+      work:'One Puch Man'
+    },
+    {
+      user:'Eren Yeager',
+      age:16,
+      work:'Attack on Titans'
+    },
+    {
+      user:'Naruto',
+      age:28,
+      work:'Naruto'
+    }
+  ]
 
-  getName(data: any){
-    this.name = data.target.value
+  parentComponent(data : any){
+    console.log(data)
   }
-
-  getPassword(data: any){
-    this.password = data.target.value
-  }
-
-  getPhone(data: any){
-    this.phone = data.target.value
-  }
-
-  getTerms(data: any){
-    this.terms = data.target.checked
-  }
-
-  printValues(event : any){
-    event.preventDefault();
-    console.log('name', this.name)
-    console.log('name', this.password)
-    console.log('name', this.phone)
-    console.log('name', this.terms)
-  }
-
 }
