@@ -8,10 +8,15 @@ import { TASKS } from '../../mock-data';
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit {
-  tasks = TASKS;
+  tasks = [];
+  taskId = ''
   constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
     this.taskService.getTask().subscribe((tasks) => this.tasks = tasks)
+
+  }
+  deleteTask(task: any){
+     this.taskService.deleteTask(task).subscribe((tasks) => this.tasks = this.tasks.filter(t => t.id! == task.id))
   }
 }

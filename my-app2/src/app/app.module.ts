@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -23,7 +24,8 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

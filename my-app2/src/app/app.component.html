@@ -1,5 +1,11 @@
 <h1 style="align-items: center;">Angular Router App</h1>
 <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+
+  <input type='text' (input)='setInput($event)' />
+  <br> <br>
+  <button (click)="displayData()">Search Now</button>
+  <br><br>
+  <img src={{avatar}} alt={{userName}} />
 <nav>
   <ul>
     <li><a routerLink="/login" routerLinkActive="active">Login Component</a></li>

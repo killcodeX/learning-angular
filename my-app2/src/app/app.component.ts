@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { HeroService } from './hero.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,26 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app2';
-  birthday=Date.now();
-  users = [
-    {
-      user:'Saitama',
-      age:26,
-      work:'One Puch Man'
-    },
-    {
-      user:'Eren Yeager',
-      age:16,
-      work:'Attack on Titans'
-    },
-    {
-      user:'Naruto',
-      age:28,
-      work:'Naruto'
-    }
-  ]
+  inputData = '';
+  avatar = '';
+  userName= '';
 
-  parentComponent(data : any){
-    console.log(data)
+  constructor(private heroService: HeroService){
+  }
+
+  setInput(data : any){
+    this.inputData= data.target.value
+  }
+
+  displayData(){
+    this.heroService.getTask(this.inputData).subscribe(data =>{
+      console.log(data)
+      this.avatar = data.avatar_url
+      this.userName = data.name
+    })
   }
 }
