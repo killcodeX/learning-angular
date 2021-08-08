@@ -16,7 +16,10 @@ export class TasksComponent implements OnInit {
     this.taskService.getTask().subscribe((tasks) => this.tasks = tasks)
 
   }
-  deleteTask(task: any){
-     this.taskService.deleteTask(task).subscribe((tasks) => this.tasks = this.tasks.filter(t => t.id! == task.id))
+  deleteTask(task: any){ //t.id == task.id
+    this.taskService.deleteTask(task).subscribe(() => this.tasks = this.tasks.filter((t:any) => t.id !== task.id))
+ }
+  ngDoCheck() : void {
+    this.tasks
   }
 }
