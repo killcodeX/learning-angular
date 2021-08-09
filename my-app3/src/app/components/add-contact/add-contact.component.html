@@ -1,19 +1,19 @@
 <div class="section">
   <h1>{{ title }}</h1>
   <div class="contact-card">
-    <form [formGroup]="formService.form">
+    <form [formGroup]="formService.form" (submit)="formService.onSubmit(formService.form.value)">
       <mat-grid-list cols="1" rowHeight="80px">
-        <div class="test">
-          <mat-grid-tile>
-            <mat-form-field appearance="fill">
-              <mat-label>Name</mat-label>
-              <input
-                matInput
-                formControlName="name"
-                placeholder="Enter your name"
-              /> </mat-form-field
-          ></mat-grid-tile>
-        </div>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              formControlName="name"
+              placeholder="Enter your name"
+            />
+            <mat-error>Please fill the name</mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
 
         <mat-grid-tile>
           <mat-form-field appearance="fill">
@@ -21,10 +21,12 @@
             <input
               matInput
               formControlName="email"
-              placeholder="Enter your name"
+              placeholder="Enter your email"
             />
+            <mat-error>Please fill the email</mat-error>
           </mat-form-field>
         </mat-grid-tile>
+
         <mat-grid-tile>
           <mat-form-field appearance="fill">
             <mat-label>Phone</mat-label>
@@ -33,8 +35,10 @@
               formControlName="phone"
               placeholder="Enter your name"
             />
+            <mat-error>Please fill the phone</mat-error>
           </mat-form-field>
         </mat-grid-tile>
+
         <mat-grid-tile>
           <mat-form-field appearance="fill">
             <mat-label>Profession</mat-label>
@@ -43,9 +47,19 @@
               formControlName="profession"
               placeholder="Enter your name"
             />
+            <mat-error>Please fill the Profession</mat-error>
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
+      <button
+        [ngStyle]="{ width: '100%' }"
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="formService.form.invalid" 
+      >
+        Add New Contact
+      </button>
     </form>
   </div>
 </div>

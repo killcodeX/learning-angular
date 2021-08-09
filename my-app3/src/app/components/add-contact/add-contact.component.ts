@@ -6,7 +6,7 @@ import { FormService } from '../../services/form.service';
   styleUrls: ['./add-contact.component.css']
 })
 export class AddContactComponent implements OnInit {
-  title:string = 'Add New Contact';
+  title:string = 'Add New Contact to the List';
 
   constructor(public formService: FormService) { }
 
