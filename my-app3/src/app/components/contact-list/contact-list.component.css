@@ -1,0 +1,13 @@
+.contact-field{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contact-field-left{
+    font-weight: bold;
+}
+
+.contact-field-right{
+    color:#947575;
+}

@@ -9,5 +9,4 @@ import { contacts, contactInterface } from 'src/mockData';
 export class AppComponent {
   title = 'my-app3';
   contacts : contactInterface[] = contacts;
-  panelOpenState = false;
 }

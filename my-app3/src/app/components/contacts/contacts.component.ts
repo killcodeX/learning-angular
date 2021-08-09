@@ -7,7 +7,7 @@ import { contactInterface } from 'src/mockData';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-
+  title: string = 'List Of Contacts'
   @Input() contacts! : contactInterface[];
   constructor() { 
   }

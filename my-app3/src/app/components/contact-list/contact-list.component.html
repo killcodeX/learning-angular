@@ -1,0 +1,22 @@
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{contact.name}}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="contact-field">
+      <p class="contact-field-left">Email</p>
+      <p class="contact-field-right">{{contact.email}}</p>
+    </div>
+    <div class="contact-field">
+      <p class="contact-field-left">Phone no</p>
+      <p class="contact-field-right">{{contact.phone}}</p>
+    </div>
+    <div class="contact-field">
+      <p class="contact-field-left">Profession</p>
+      <p class="contact-field-right">{{contact.profession}}</p>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

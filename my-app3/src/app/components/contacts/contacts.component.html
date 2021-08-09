@@ -1,5 +1,5 @@
-<h1>List Of Contacts</h1>
+<h1>{{title}}</h1>
 
 <div class="contact-card">
-    
+    <app-contact-list *ngFor="let contact of contacts" [contact]="contact"></app-contact-list>
 </div>
