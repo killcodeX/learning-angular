@@ -1,4 +1,4 @@
-<div class="task">
+<div [ngClass]="{ reminder: task.reminder }" class="task">
   <h3>
     {{ task.text }} <span (click)="onDelete(task)"><i [ngStyle]="{ color: 'red' }" class="fas fa-times"></i></span>
   </h3>
