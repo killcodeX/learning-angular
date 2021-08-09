@@ -1,9 +1,51 @@
 <div class="section">
-    <h1>{{title}}</h1>
+  <h1>{{ title }}</h1>
   <div class="contact-card">
-    <mat-form-field appearance="fill">
-      <mat-label>Input</mat-label>
-      <input matInput>
-    </mat-form-field>
+    <form [formGroup]="formService.form">
+      <mat-grid-list cols="1" rowHeight="80px">
+        <div class="test">
+          <mat-grid-tile>
+            <mat-form-field appearance="fill">
+              <mat-label>Name</mat-label>
+              <input
+                matInput
+                formControlName="name"
+                placeholder="Enter your name"
+              /> </mat-form-field
+          ></mat-grid-tile>
+        </div>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              placeholder="Enter your name"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <mat-label>Phone</mat-label>
+            <input
+              matInput
+              formControlName="phone"
+              placeholder="Enter your name"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill">
+            <mat-label>Profession</mat-label>
+            <input
+              matInput
+              formControlName="profession"
+              placeholder="Enter your name"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
   </div>
 </div>
