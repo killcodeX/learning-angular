@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { contacts, contactInterface } from 'src/mockData';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app3';
+  contacts : contactInterface[] = contacts;
   panelOpenState = false;
 }

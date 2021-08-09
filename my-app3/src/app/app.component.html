@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="section">
-  <h1> Contact Manager</h1>
-
+  <app-contacts [contacts]="contacts"></app-contacts>
   <mat-accordion>
     <mat-expansion-panel
       (opened)="panelOpenState = true"
