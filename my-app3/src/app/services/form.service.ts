@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { contacts } from '../../mockData';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +17,7 @@ export class FormService {
   })
 
   onSubmit(data: any){
-    console.log(data)
+    contacts.push(data)
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="section">
   <h1>{{ title }}</h1>
   <div class="contact-card">
-    <form [formGroup]="formService.form" (submit)="formService.onSubmit(formService.form.value)">
+    <form [formGroup]="formService.form" (submit)="onAdd(formService.form.value)">
       <mat-grid-list cols="1" rowHeight="80px">
         <mat-grid-tile>
           <mat-form-field appearance="fill">
